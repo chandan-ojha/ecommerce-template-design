@@ -155,8 +155,8 @@ button:focus {
 .topbar-menu-area {
     width: 100%;
     background: #EE750B;
-    padding-bottom: 8px;
-    padding-top: 8px;
+    padding-bottom: 3px;
+    padding-top: 3px;
 
 }
 
@@ -165,9 +165,6 @@ button:focus {
     align-items: center;
     justify-content: center;
     gap: 20px;
-
-
-
 }
 
 .topbar-menu-area .topbar-menu h5 {
@@ -178,19 +175,18 @@ button:focus {
 }
 
 .topbar-menu-area .topbar-menu p {
-    font-size: 12px;
-    padding: 7px 6px;
-    border-radius: 6px;
+    font-size: 10px;
+    padding: 3px 3px;
+    border-radius: 8px;
     margin: 0 !important;
     background-color: #ffffff;
     color: #000000;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 2px;
     cursor: pointer;
     justify-content: center;
-
 }
 
 .nav-search-part {
@@ -454,62 +450,18 @@ button:focus {
 }
 
 .content-box .slider-offer {
-    font-size: 15px;
-    padding: 15px 7px;
+    font-size: 13px;
+    padding: 5px 5px;
     border: 1px solid #EE750B;
-    border-radius: 6px;
-    margin: 0 !important;
+    border-radius: 10px;
     background-color: #FFFDFD;
     color: #EE750B;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 0px;
-    cursor: pointer;
     justify-content: center;
+    cursor: pointer;
 }
-
-/* @media (max-width: 992px) {
-    .slider .content-box h2 {
-        font-size: 40px;
-        max-width: 100%;
-    }
-    .slider .content-box .sub-title {
-        font-size: 16px;
-    }
-}
-@media (max-width: 768px) {
-    .slider .carousel-control-prev,
-    .slider .carousel-control-next {
-        width: 35px;
-        height: 35px;
-    }
-    .slider .carousel-control-prev {
-        right: 85px;
-    }
-    .slider .carousel-control-prev .carousel-control-prev-icon,
-    .slider .carousel-control-next .carousel-control-next-icon {
-        width: 1rem;
-        height: 1rem;
-    }
-    .slider .carousel-item .slider-image,
-    .slider .carousel {
-        height: 50vh;
-    }
-    .slider {
-        margin-top: 50px;
-    }
-}
-@media (max-width: 576px) {
-    .slider .content-box h2 {
-        font-size: 36px;
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-    .btn-style-one .btn-title {
-        padding: 7px 20px;
-    }
-} */
 /* ===== Slider Section End */
 
 /* =========category section========= */
@@ -570,17 +522,15 @@ button:focus {
 
 .single-category {
     flex: 0 0 auto;
-   
     min-width: 104px;
-  
     text-align: center;
     scroll-snap-align: start;
 }
 
 
 .single-category img {
-    width: 124px;
-    height: 124px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     border-radius: 999px;
     display: block;
@@ -605,8 +555,8 @@ button:focus {
 }
 @media (min-width: 992px) {
     .single-category img {
-        width: 100px;
-        height: 100px;
+        width: 140px;
+        height: 140px;
     }
 }
 
@@ -633,12 +583,6 @@ button:focus {
     font-size: 14px;
     cursor: pointer;
 }
-
-
-
-
-
-
 
 
 /* ==============end featured-product ========== */
