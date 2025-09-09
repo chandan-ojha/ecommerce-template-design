@@ -56,7 +56,7 @@ button:focus {
     background: none;
     border: 1px solid #203A8E;
     border-radius: 8px;
-    padding: 7px 10px;
+    padding: 10px 10px;
     color: #203A8E;
     font-size: 14px;
     min-width: 97px;
@@ -147,7 +147,6 @@ button:focus {
     -ms-transform-origin: top left;
     transform-origin: top left;
 }
-
 
 /* ===== Global Style End */
 
@@ -244,7 +243,7 @@ button:focus {
 .header-content .item-list ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
     font-size: 14px;
     font-weight: 600;
@@ -402,52 +401,16 @@ button:focus {
     text-transform: capitalize;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-family: var(--fontPTSans);
-    max-width: 69%;
+     padding-left: 88px;
+   padding-bottom: 20px;
 }
 
 .slider .carousel-indicators {
     display: none;
 }
 
-.slider .carousel-control-next {
-    position: absolute;
-    background: transparent;
-    right: 40px;
-    bottom: 30px;
-    top: unset;
-    left: unset;
-    width: 32px;
-    height: 32px;
-    border: 2px solid var(--white);
-    opacity: 1;
-    border-radius: 30px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
 
-.slider .carousel-control-prev {
-    position: absolute;
-    background: transparent;
-    left: unset;
-    top: unset;
-    bottom: 30px;
-    right: 100px;
-    width: 32px;
-    height: 32px;
-    border: 2px solid var(--white);
-    opacity: 1;
-    border-radius: 30px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
 
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: 100% 100%;
-}
 
 .content-box .slider-offer {
     font-size: 13px;
@@ -461,7 +424,34 @@ button:focus {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+        margin-left: 86px;
 }
+ /* Position both controls vertically centered */
+.slider .carousel-control-prev,
+.slider .carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%); /* center vertically */
+  bottom: unset; /* reset bottom positioning */
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3); /* optional semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.slider .carousel-control-prev {
+  left: 2px;   /* push slightly from left */
+}
+
+.slider .carousel-control-next {
+  right: 2px;  /* push slightly from right */
+}
+
 /* ===== Slider Section End */
 
 /* =========category section========= */
@@ -469,8 +459,6 @@ button:focus {
 .category-part {
     padding: 24px 0;
 }
-
-
 .category-part h3 {
     font-family: var(--fontPTSans);
     font-weight: 600;
@@ -491,7 +479,14 @@ button:focus {
     background-color: #203A8E;
     color: #ffffff;
 }
-
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+}
 /* Horizontal scroll container */
 .category-box {
     display: flex;
@@ -567,6 +562,10 @@ button:focus {
     border-radius: 10px 10px 0px 0px;  
 
 } 
+
+.card-section .card-body {
+    padding: 20px 20px;
+}
 .card-section .card-header{
     background: #EE750B;
     color: #ffffff;
@@ -584,6 +583,308 @@ button:focus {
     cursor: pointer;
 }
 
+.featured-product .carousel-control-prev,
+.featured-product .carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: unset;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #1E1E1E;
+  color: #FFFFFF !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.featured-product .carousel-control-prev {
+  left: 1px;
+  background: #1E1E1E;
+  color: #FFFFFF !important;
+}
+
+.featured-product .carousel-control-next {
+  right: 1px;
+  
+}
+
+.featured-product .carousel-control-prev-icon,
+.featured-product .carousel-control-next-icon {
+  filter: invert(1);
+  width: 20px;
+  height: 20px;
+}
+.featured-product .carousel-control-prev-icon span,
+.featured-product .carousel-control-next-icon span{
+    font-size: 80px;
+    font-weight: 600;
+}
+.card .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1E1E1E;
+}
+.card .card-body .vat{
+    font-size: 14px;
+    color: #1E1E1E;
+    margin-top: 5px;
+}
 /* ==============end featured-product ========== */
 
+ /* <!-- =========banner section start ===== --> */
+.banner-section {
+    margin-top: 24px;
+    border-radius: 8px;
+   padding-bottom: 24px;
+}
+
+
+/* ================end banner section ====== --> */
+
+/* =========more-product start ===== */
+/* Section container */
+.show-products {
+  margin: 40px 0;
+}
+
+/* Section header */
+.show-products .section-title h3 {
+  font-family: var(--fontPTSans);
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #203A8E;
+}
+.more-product .section-title p {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 4px 8px;
+    background-color: #EE750B;
+    color: #FFFDFD;
+}
+
+/* Products grid */
+.more-product-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px; /* gap between cards */
+  margin-top: 20px;
+}
+
+/* Card design */
+.single-more-product {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Hover effect */
+.single-more-product:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 14px;
+}
+
+
+.single-more-product .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1E1E1E;
+        padding-bottom: 13px;
+
+}
+.single-more-product .card-body .vat{
+    font-size: 14px;
+    color: #1E1E1E;
+    margin-top: 2px;
+
+}
+
+.single-more-product {
+    border-radius: 10px 10px 10px 10px;  
+
+} 
+.single-more-product img{
+    border-radius: 10px 10px 0px 0px;  
+
+} 
+
+.single-more-product .card-body {
+    padding: 20px 20px;
+        text-align: justify;
+}
+
+/* =========more-product end ===== */
+ /* <!-- =========banner section two start ===== --> */
+.banner-section-two{
+    margin-top: 24px;
+    border-radius: 8px;
+   padding-bottom: 24px;
+}
+
+
+/* ================end banner section ====== --> */
+/* Section spacing */
+.out-clicnts {
+  padding: 40px 0;
+  background: #fff;
+}
+.out-clicnts h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Flex container */
+.our-client {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* spacing between logos */
+   transform: translate3d(0,0,0);
+  animation: floatScroll 10s ease-in-out infinite;
+  animation-direction: alternate; /* goes left then returns */
+}
+
+/* Each client logo box */
+.single-client {
+  flex: 0 0 auto; /* prevent shrinking */
+}
+
+.single-client img {
+  width: 120px;   /* logo width */
+  height: auto;   /* keep ratio */
+  max-height: 60px; /* optional height limit */
+
+}
+@keyframes floatScroll {
+  0%   { transform: translateX(-2%); }     /* start */
+  100% { transform: translateX(10%); }     /* return */
+}
+
+
+/* Animation (marquee style scroll) */
+
+.footer {
+    background-image: url(../images/bg-footer.png),
+        linear-gradient(to right, var(--text), var(--text));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 0 30px;
+}
+.footer .footer-logo {
+    width: 100px;
+}
+.footer-item .box-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white);
+    font-family: var(--fontPlayFair);
+    margin-bottom: 30px;
+}
+.footer-item p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    padding-right: 30px;
+}
+.footer-item ul li {
+    margin: 12px 0;
+}
+.footer-item ul li a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.footer-item ul li a:hover {
+    color: var(--yellow);
+}
+.footer-item .social-icons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.footer-item .social-icons li {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+}
+.footer-item .social-icons li:hover {
+    transform: scale(1.1);
+    background-color: var(--yellow);
+}
+.footer-item .social-icons li a i {
+    color: var(--text);
+}
+.footer-contact ul li {
+    color: rgba(255, 255, 255, 0.5);
+}
+.footer-contact ul li i {
+    width: 25px;
+    color: var(--yellow);
+}
+.footer-contact .input-email {
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 65px 15px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--transparent);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    font-size: 16px;
+}
+.footer-contact .input-email:focus {
+    outline: none;
+    border: 1px solid var(--yellow);
+}
+.footer-contact .btn-email {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    padding: 11px 15px;
+    background-color: var(--yellow);
+    text-align: center;
+    border-radius: 5px;
+}
+.footer-contact .btn-email i {
+    color: var(--white);
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 0 5px;
+}
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin: 0;
+}
+@media (max-width: 768px) {
+    .footer-item {
+        margin-bottom: 60px;
+    }
+}
+@media (max-width: 576px) {
+    .footer {
+        padding: 60px 0 30px;
+    }
+}
+/* ===== Footer Section End */
