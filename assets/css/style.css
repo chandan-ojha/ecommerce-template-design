@@ -1016,6 +1016,9 @@ height: 45px;
     box-shadow: none !important;
     border: 1px solid #203A8E;
 }
-.login-content a{
-  color:   rgb(113 118 125);
+.login-content .forgot-pass{
+    color: #4D4D4D;
+    border-bottom: 1px solid #4d4d4da8;
+    margin-bottom: -2px;
+    font-size: 14px;
 }
