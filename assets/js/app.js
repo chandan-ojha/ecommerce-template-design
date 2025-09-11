@@ -66,3 +66,4 @@ document.addEventListener("DOMContentLoaded", () => {
   leftBtn.addEventListener("click", () => safeScrollBy(-scrollAmount));
 });
 
+
