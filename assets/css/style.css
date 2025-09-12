@@ -51,7 +51,10 @@ button:focus {
     outline: none !important;
     box-shadow: none !important;
 }
-
+.form-control:focus {
+    box-shadow: none !important;
+    border: 1px solid #203A8E;
+}
 .btn-login {
     background: none;
     border: 1px solid #203A8E;
@@ -781,6 +784,8 @@ button:focus {
     display: flex;
     align-items: center;
     gap: 40px;
+    overflow: hidden; 
+    width: 100%;  
     /* spacing between logos */
     transform: translate3d(0, 0, 0);
     animation: floatScroll 10s ease-in-out infinite;
@@ -1069,7 +1074,7 @@ button:focus {
 
 /* ============LOGIN================= */
 .login-content {
-    width: 640px;
+    width: 560px;
     height: 478px;
     margin: 0 auto;
     border: 1px solid #0C0C0D1A;
@@ -1080,13 +1085,13 @@ button:focus {
 }
 
 .login-part-hight {
-    min-height: calc(100vh - 224px);
+    height: calc(100vh - 64px);
 }
 
-@media (min-width: 2040px) {
-    .login-part-hight {
-        min-height: calc(100vh - 467px);
-    }
+@media (min-width: 1400px) and (max-width: 2040px) {
+  .login-part-hight {
+    height: calc(100vh - 467px);
+  }
 }
 
 .login-content .login-titel {
@@ -1139,7 +1144,7 @@ button:focus {
     min-height: calc(100vh + -8px);
 }
 
-@media (min-width: 2040px) {
+@media (min-width: 1400px) and (max-width: 2040px){
     .creat-part-hight {
         min-height: calc(100vh + -157px);
     }
@@ -1186,41 +1191,121 @@ button:focus {
 
 }
 
-.accordion {
-    border: 1px solid #D9D9D9 !important;
+.accordion-card{
     border-radius: 4px;
     width: 220px;
+    margin-top: 14px;
+    border: 2px solid #E7E7E7;
+
     
 }
 
-.accordion-item {
-    border-bottom: 1px solid #eee;
+.accordion-card .accordion-item {
+    border-bottom: 1px solid #E7E7E7;
+
+}
+.accordion-card .accordion-item h2 {
+    padding: 16px 12px 16px 12px;
+    font-size: 16px;
+    font-weight: 800;
+    font-family: "Abhaya Libre ExtraBold", sans-serif;
 }
 
-.accordion-header {
+.accordion-item .accordion-header {
     background: #fff;
     cursor: pointer;
     font-weight: bold;
     position: relative;
+    border-bottom: 1px solid #E7E7E7;
 }
 
-.accordion-button::after {
-    flex-shrink: 0;
-    width: var(--bs-accordion-btn-icon-width);
-    height: var(--bs-accordion-btn-icon-width);
-    margin-left: auto;
-    content: "";
-    background-image: var(--bs-accordion-btn-icon);
-    background-repeat: no-repeat;
-    background-size: 17px;
-    transition: var(--bs-accordion-btn-icon-transition);
+.accordion-card .accordion-body {
+    padding: 14px 12px 14px 12px;
+}
+.accordion-card .accordion-body p {
+    font-family: "Prompt", sans-serif;
+    font-size: 13px;
+    color: #555555;
+}
+.accordion-header .btn-link {
+  background: #fff;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+ border-radius: 8px !important;
+text-decoration: none;
+}
+.accordion-header .btn-link:hover{
+    color: #000;
+}
+.accordion-header .btn-link::after {
+    content: '\e5ce';
+    font-family: "Material Icons";
+    font-weight: 600;
+    position: absolute;
+    right: 2px;
+    top: -7px;
+    color: #333333;
+    font-size: 25px;
+    transition: transform 0.3s;
 }
 
-.accordion-button {
-    padding: 10px !important;
+.accordion-header  .btn-link.collapsed::after {
+  transform: rotate(180deg);
+}
+/* Custom thumb */
+.accordion-card .accordion-body .Range-slider{
+    width: 96px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 18px;
+  height: 18px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  pointer-events: all;
+  width: 18px;
+  height: 18px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.accordion-body .select-product .form-check{
+    padding: 0px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+        margin: 0px;
+
 }
 /* ============card-section-products */
 /* Card design */
+
+.titel-section h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-left: 58px;
+}
+.titel-section .sorted-by{
+    width: 107px;
+    height: 43px;
+    color: #8C8C8C;
+    font-size: 14px;
+
+}
+.titel-section .form-control:focus{
+    box-shadow: none;
+    outline: none;
+    border-color: #f5a93f;
+
+}
+
+
 .all-product-card .all-product {
     border: 1px solid #eee;
     border-radius: 10px;
@@ -1231,8 +1316,6 @@ button:focus {
     flex-direction: column;
     text-align: center;
 }
-
-/* Hover effect */
 .all-product:hover {
     transform: translateY(-5px);
     box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 14px;
@@ -1255,7 +1338,7 @@ button:focus {
 }
 
 .all-product .card-body .vat {
-    font-size: 12px;
+    font-size: 14px;
     color: #1E1E1E;
     margin-top: 2px;
 
@@ -1274,4 +1357,65 @@ button:focus {
 .all-product .card-body {
     padding: 20px 20px;
     text-align: justify;
+}
+
+.footer-part-pag{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding-left: 3rem;
+}
+
+.footer-part-pag .page-link {
+  border: none;
+  color: #333;
+  padding: 8px 14px;
+  text-decoration: none;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.footer-part-pag .page-item.active .page-link,
+.footer-part-pag .page-link:hover {
+  border-bottom: 2px solid #4D4D4D; /* blue underline */
+  color: #0d6efd;
+  background: transparent;
+      padding-bottom: 1px;
+}
+
+/* ====================== END-PRODUCT========= */
+
+/* ===================product-details============= */
+.product-img {
+  max-height: 450px;
+  object-fit: cover;
+}
+
+/* Badge style */
+.custom-badge {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Quantity box */
+.quantity-box {
+  max-width: 130px;
+}
+.quantity-box .form-control {
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+}
+.quantity-box .btn {
+  border-radius: 0;
+}
+
+/* Features icons */
+.feature-icon {
+  font-size: 1.8rem;
+  color: #0d6efd;
+  display: block;
+  margin-bottom: 5px;
 }

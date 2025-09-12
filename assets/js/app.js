@@ -67,3 +67,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+const rangeMin = document.getElementById("rangeMin");
+const rangeMax = document.getElementById("rangeMax");
+const minPrice = document.getElementById("minPrice");
+const maxPrice = document.getElementById("maxPrice");
+
+function syncInputs() {
+  let minVal = parseInt(rangeMin.value);
+  let maxVal = parseInt(rangeMax.value);
+  if (minVal > maxVal) {
+    [minVal, maxVal] = [maxVal, minVal];
+  }
+  minPrice.value = minVal;
+  maxPrice.value = maxVal;
+}
+
+rangeMin.addEventListener("input", syncInputs);
+rangeMax.addEventListener("input", syncInputs);

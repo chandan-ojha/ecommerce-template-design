@@ -69,9 +69,9 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html">Home Page</a>
               </li>
-               <li class="nav-item">
-                                <a class="nav-link" href="product.html">Browse Products</a>
-                            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Browse Products</a>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -101,42 +101,62 @@
       </div>
     </nav>
     <div class="container">
-      <!-- =========login-part -->
-      <section id="login-part">
-        <div class="login-part-hight d-flex flex-column justify-content-center">
-          <div class="container">
-            <div class="login-content">
-              <div class="login-titel">
-                <h1>Login Account</h1>
+      <section id="product-details">
+        <div class="row g-4 align-items-center">
+          <!-- Product Image -->
+          <div class="col-md-6">
+            <img src="./assets/images/product-details-1.jpg" alt="Product" class="img-fluid rounded shadow-sm" />
+          </div>
+
+          <div class="col-md-6">
+            <div class="mb-2">
+              <span class="badge bg-light text-primary border me-2">Afterpay & Klarna</span>
+              <span class="badge bg-light text-danger border">Same day dispatch</span>
+            </div>
+
+            <h4 class="fw-bold">LUX SKIN® Premium IPL V2 - FDA Cleared</h4>
+            <div class="mb-3">
+              <span class="fw-bold fs-3 text-primary">79.00 BDT</span>
+              <span class="text-muted text-decoration-line-through ms-2">158.00</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <small class="text-muted ms-1">329 Review</small>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <div class="input-group w-auto" style="max-width:120px;">
+                <button class="btn btn-outline-secondary" type="button">-</button>
+                <input type="text" class="form-control text-center" value="01">
+                <button class="btn btn-outline-secondary" type="button">+</button>
               </div>
-              <div class="mb-3">
-                <label class="form-label" for="username">Email</label>
-                <input class="form-control" type="email" id="email" />
+              <button class="btn btn-primary ms-3 px-4">ADD TO CART</button>
+            </div>
+
+
+            <p class="small text-muted">Minimum 50pcs Order Quantity is Required</p>
+
+            <div class="d-flex justify-content-between text-center border-top pt-3">
+              <div class="flex-fill">
+                <i class="bi bi-truck fs-4 text-primary"></i>
+                <p class="small mb-0">Fast Shipping</p>
               </div>
-              <div class="mb-3">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                  <label  for="password">Password</label>
-                  <a href="#" class="forgot-pass">Forgot Password?</a>
-                </div>
-                <input class="form-control" type="password" id="password" name="password" required />
+              <div class="flex-fill">
+                <i class="bi bi-arrow-repeat fs-4 text-primary"></i>
+                <p class="small mb-0">Easy return</p>
               </div>
-              <div class="row mb-3">
-                <div class="col-6">
-                  <div class="form-check text-start p-0">
-                    <input  type="checkbox" id="remember-me" />
-                    <label  for="remember-me">Remember Me</label>
-                  </div>
-                </div>
-              </div>
-              <div class="login-account">
-                <button type="submit" class="btn btn-primary w-100">Login to Account</button>
+              <div class="flex-fill">
+                <i class="bi bi-cash-stack fs-4 text-primary"></i>
+                <p class="small mb-0">50%-80% Lower Price</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+         </section>
+    </div>
+   
 
-      <!-- ===============end login-part -->
+    <!-- ===============end login-part -->
     </div>
     <footer id="footer">
       <div class="wrap-footer-content footer-style-1">
