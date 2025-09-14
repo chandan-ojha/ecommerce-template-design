@@ -1741,11 +1741,12 @@ input[type="range"]::-moz-range-thumb {
 
 }
     .cart-item img {
-      width: 120px;
-      height: auto;
-      border-radius: 8px;
-      margin-right: 15px;
-    }
+    width: 127px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 34px;
+    margin-left: 18px;
+}
     .cart-details {
       flex: 1;
     }
@@ -1786,6 +1787,11 @@ input[type="range"]::-moz-range-thumb {
       margin: 0 20px;
       cursor: pointer;
     }
+    .heading-pro{font-size: 28px;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
     .price-box {
 
     margin-right: 15px;
@@ -1797,13 +1803,13 @@ input[type="range"]::-moz-range-thumb {
     }
     .old-price {
       text-decoration: line-through;
-      font-size: 0.85rem;
+      font-size:14px;
       color: #888;
       display: block;
     }
     .new-price {
-      font-size: 1.2rem;
-      font-weight: bold;
+      font-size: 24px;
+      font-weight:700;
       color: #000;
     }
 /* ===========end-cart====== */
