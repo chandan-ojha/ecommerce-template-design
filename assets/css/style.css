@@ -1231,7 +1231,15 @@ button:focus {
     cursor: pointer;
     text-decoration: underline;
 }
-
+.visibility{
+        position: absolute;
+    right: 8px;
+    top: 47px;
+    font-size: 18px;
+    color: #026cd1;
+    font-weight: 500;
+    cursor: pointer;
+}
 /* ================end creat-account=========== */
 
 /* ======================  PRODUCT========= */
@@ -2339,3 +2347,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* =================end-dalivery-part================== */
+
+
+
+/* ==============REPONSIVE DESGIN=========== */
