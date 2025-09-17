@@ -448,6 +448,11 @@ button:focus {
     width: 72px;
     height: 107px;
 }
+.carousel-inner
+
+ {
+    border-radius: 12px;
+}
 
 .carousel-indicators button {
     width: 12px !important;
@@ -2349,3 +2354,16 @@ input[type="range"]::-moz-range-thumb {
 
 
 /* ==============REPONSIVE DESGIN=========== */
+/* Fix header sections */
+#header-part {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1050; /* Keep it above everything */
+  background: #fff; /* Prevent transparency */
+
+}
+
+
