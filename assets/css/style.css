@@ -2076,6 +2076,9 @@ input[type="range"]::-moz-range-thumb {
 
 /* ===============CONTACT-US============= */
 /* Left side */
+.contact-wrapper{
+    padding: 40px;
+}
 .contact-info {
     padding: 40px;
     color: #000000;
