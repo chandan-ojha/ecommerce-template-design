@@ -1109,14 +1109,9 @@ button:focus {
 }
 
 .login-part-hight {
-    height: calc(100vh - 64px);
+    padding: 40px;
 }
 
-@media (min-width: 1400px) and (max-width: 2040px) {
-    .login-part-hight {
-        height: calc(100vh - 350px);
-    }
-}
 
 .login-content .login-titel {
     border-bottom: 1px solid #0C0C0D1A;
@@ -1185,7 +1180,7 @@ button:focus {
 }
 
 .creat-part-hight {
-    min-height: calc(100vh + -8px);
+   padding: 60px;
 }
 
 @media (min-width: 1400px) and (max-width: 2040px) {
