@@ -2243,7 +2243,6 @@ input[type="range"]::-moz-range-thumb {
     color: #363636;
 
 }
-
 .confirm-order-box .item {
     font-size: 14px;
 
@@ -2350,9 +2349,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* =================end-dalivery-part================== */
-
-
-
 /* ==============REPONSIVE DESGIN=========== */
 /* Fix header sections */
 #header-part {
@@ -2360,10 +2356,8 @@ input[type="range"]::-moz-range-thumb {
   top: 0;
   left: 0;
   width: 100%;
-
   z-index: 1050; /* Keep it above everything */
   background: #fff; /* Prevent transparency */
-
 }
-
-
+ /* Tablets and below */
+      
