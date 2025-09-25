@@ -1270,7 +1270,7 @@ button:focus {
 }
 
 .accordion-card .accordion-item h2 {
-    padding: 16px 12px 16px 12px;
+    
     font-size: 16px;
     font-weight: 800;
     font-family: "Abhaya Libre", sans-serif;
@@ -1303,6 +1303,7 @@ button:focus {
     cursor: pointer;
     border-radius: 8px !important;
     text-decoration: none;
+    padding: 16px 12px 16px 12px;
 }
 
 .accordion-header .btn-link:hover {
@@ -1314,8 +1315,8 @@ button:focus {
     font-family: "Material Icons";
     font-weight: 600;
     position: absolute;
-    right: 2px;
-    top: -3px;
+       right: 6px;
+    top: 14px;
     color: #333333;
     font-size: 20px;
     transition: transform 0.3s;
