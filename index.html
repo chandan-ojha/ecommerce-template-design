@@ -17,8 +17,6 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-
-
     <title>E-commerce</title>
 </head>
 
@@ -33,11 +31,15 @@
                     </p>
                 </div>
             </div>
-
             <div class="container">
                 <div class="nav-search-part">
                     <div class="header-content">
                         <div class="main-info-area">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="material-icons menu">menu</span>
+                            </button>
                             <div class="wrap-logo-top left-section">
                                 <a href="index.html" class="link-to-home"><img src="assets/images/image 18.png" /></a>
                             </div>
@@ -56,44 +58,46 @@
                     </div>
                     <div class="login-part">
                         <span class="material-icons">shopping_cart</span>
-                        <a href="login.html"><button class="btn-login" href="login.html">Login</button></a>
-                        <a href="register.html"> <button class="btn-register">Register</button></a>
-                        <div class="dropdown profile-img">
-                            <a class="d-inline-block" id="profileDropdown" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img src="./assets/images/profile-logo.jpg" class="rounded-circle" alt="Profile"
-                                    width="45" height="45">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end shadow p-2" aria-labelledby="profileDropdown"
-                                style="min-width:225px;">
-                                <div class="d-flex align-items-center mb-3">
-                                    <img src="./assets/images/profile-logo.jpg" class="rounded-circle me-2" alt="Profile"
-                                        width="60" height="60">
-                                    <div class="text-start">
-                                        <h6 class="mb-0">James Anderson</h6>
-                                        <small class="text-muted">Administrator</small>
+                        <div class="log-content d-flex align-items-center gap-3">
+                            <a href="login.html"><button class="btn-login" href="login.html">Login</button></a>
+                            <a href="register.html"> <button class="btn-register">Register</button></a>
+                            <div class="dropdown profile-img">
+                                <a class="d-inline-block" id="profileDropdown" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="./assets/images/profile-logo.jpg" class="rounded-circle" alt="Profile"
+                                        width="45" height="45">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end shadow p-2"
+                                    aria-labelledby="profileDropdown" style="min-width:225px;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./assets/images/profile-logo.jpg" class="rounded-circle me-2"
+                                            alt="Profile" width="60" height="60">
+                                        <div class="text-start">
+                                            <h6 class="mb-0">James Anderson</h6>
+                                            <small class="text-muted">Administrator</small>
+                                        </div>
                                     </div>
+                                    <a class="dropdown-item d-flex align-items-center gap-2 ps-2">
+                                        <span class="material-icons">person</span> My Account
+                                    </a>
+                                    <a class="dropdown-item d-flex align-items-center gap-2 ps-2">
+                                        <span class="material-icons">settings</span> Settings
+                                    </a>
+                                    <a class="dropdown-item d-flex align-items-center gap-2 ps-2">
+                                        <span class="material-icons">chat</span> Support
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="d-flex align-items-center text-danger gap-2 ps-2 pt-2 pb-2">
+                                        <span class="material-icons">logout</span> Logout
+                                    </a>
                                 </div>
-                                <a class="dropdown-item d-flex align-items-center gap-2 ps-2">
-                                    <span class="material-icons">person</span> My Account
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center gap-2 ps-2">
-                                   <span class="material-icons">settings</span> Settings
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center gap-2 ps-2">
-                                    <span class="material-icons">chat</span> Support
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="d-flex align-items-center text-danger gap-2 ps-2 pt-2 pb-2">
-                                    <span class="material-icons">logout</span> Logout
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <nav class="navbar navbar-expand-lg">
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="container d-flex justify-content-between">
                         <div>
                             <ul class="navbar-items navbar-nav">
@@ -209,7 +213,7 @@
             <!-- ====category========= -->
             <section class="catergory">
                 <div class="category-part">
-                    <div class="d-flex justify-content-between align-items-center mt-2">
+                    <div class="d-flex justify-content-between mt-2">
                         <div class="section-title">
                             <h3>Browse by Category</h3>
                         </div>

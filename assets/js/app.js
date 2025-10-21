@@ -67,20 +67,39 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const rangeMin = document.getElementById("rangeMin");
-const rangeMax = document.getElementById("rangeMax");
-const minPrice = document.getElementById("minPrice");
-const maxPrice = document.getElementById("maxPrice");
+  const zoomContainer = document.getElementById("zoomBox");
+  const zoomImage = document.getElementById("zoomImage");
 
-function syncInputs() {
-  let minVal = parseInt(rangeMin.value);
-  let maxVal = parseInt(rangeMax.value);
-  if (minVal > maxVal) {
-    [minVal, maxVal] = [maxVal, minVal];
-  }
-  minPrice.value = minVal;
-  maxPrice.value = maxVal;
-}
+  // Create magnifier
+  const magnifier = document.createElement("div");
+  magnifier.classList.add("magnifier");
+  const magnifierImg = document.createElement("img");
+  magnifierImg.src = zoomImage.src;
+  magnifier.appendChild(magnifierImg);
+  zoomContainer.appendChild(magnifier);
 
-rangeMin.addEventListener("input", syncInputs);
-rangeMax.addEventListener("input", syncInputs);
+  const zoomLevel = 2; // Magnification level
+
+  zoomContainer.addEventListener("mousemove", (e) => {
+    magnifier.style.display = "block";
+
+    const rect = zoomContainer.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const glassSize = magnifier.offsetWidth / 2;
+
+    // Position the magnifier glass
+    magnifier.style.left = `${x - glassSize}px`;
+    magnifier.style.top = `${y - glassSize}px`;
+
+    // Move the background image inside magnifier
+    magnifierImg.style.width = `${zoomImage.width * zoomLevel}px`;
+    magnifierImg.style.height = `${zoomImage.height * zoomLevel}px`;
+    magnifierImg.style.left = `${-x * (zoomLevel - 1) + glassSize}px`;
+    magnifierImg.style.top = `${-y * (zoomLevel - 1) + glassSize}px`;
+  });
+
+  zoomContainer.addEventListener("mouseleave", () => {
+    magnifier.style.display = "none";
+  });
