@@ -58,6 +58,37 @@
                     </div>
                     <div class="login-part">
                         <span class="material-icons">shopping_cart</span>
+                        <div class="dropdown profile-img-sm">
+                            <a class="d-inline-block" id="profileDropdown" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="./assets/images/profile-logo.jpg" class="rounded-circle" alt="Profile"
+                                    width="45" height="45">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end shadow p-2" aria-labelledby="profileDropdown"
+                                style="min-width:225px;">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="./assets/images/profile-logo.jpg" class="rounded-circle me-2"
+                                        alt="Profile" width="60" height="60">
+                                    <div class="text-start">
+                                        <h6 class="mb-0">James Anderson</h6>
+                                        <small class="text-muted">Administrator</small>
+                                    </div>
+                                </div>
+                                <a class="dropdown-item d-flex align-items-center gap-2 ps-2">
+                                    <span class="material-icons">person</span> My Account
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center gap-2 ps-2">
+                                    <span class="material-icons">settings</span> Settings
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center gap-2 ps-2">
+                                    <span class="material-icons">chat</span> Support
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="d-flex align-items-center text-danger gap-2 ps-2 pt-2 pb-2">
+                                    <span class="material-icons">logout</span> Logout
+                                </a>
+                            </div>
+                        </div>
                         <div class="log-content d-flex align-items-center gap-3">
                             <a href="login.html"><button class="btn-login" href="login.html">Login</button></a>
                             <a href="register.html"> <button class="btn-register">Register</button></a>

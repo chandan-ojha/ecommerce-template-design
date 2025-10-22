@@ -311,7 +311,9 @@ button:focus {
     font-weight: 500;
     margin-top: -3px;
 }
-
+.login-part  .profile-img-sm{
+    display: none;
+}
 .navbar .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
@@ -2298,7 +2300,9 @@ input[type="range"]::-moz-range-thumb {
     .topbar-menu-area {
         display: none;
     }
-
+#header-part {
+    padding-bottom: 12px;
+}
     .main-info-area .wrap-search-form input {
         display: inline-block;
         border: 1px solid #00000040;
@@ -2427,5 +2431,13 @@ input[type="range"]::-moz-range-thumb {
         padding: 8px 9px 12px 10px;
         margin: 10px;
         border-radius: 8px;
+        margin-top: -14px;
     }
+    .nav-search-part .main-info-area {
+    gap: 35px;
+
+}
+.login-part  .profile-img-sm{
+    display: block;
+}
 }
