@@ -311,9 +311,11 @@ button:focus {
     font-weight: 500;
     margin-top: -3px;
 }
-.login-part  .profile-img-sm{
+
+.login-part .profile-img-sm {
     display: none;
 }
+
 .navbar .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
@@ -361,6 +363,7 @@ button:focus {
     position: relative;
     z-index: 1;
 }
+
 /* 
 @keyframes zoomInOut {
     0% {
@@ -2300,9 +2303,11 @@ input[type="range"]::-moz-range-thumb {
     .topbar-menu-area {
         display: none;
     }
-#header-part {
-    padding-bottom: 12px;
-}
+
+    #header-part {
+        padding-bottom: 12px;
+    }
+
     .main-info-area .wrap-search-form input {
         display: inline-block;
         border: 1px solid #00000040;
@@ -2375,12 +2380,13 @@ input[type="range"]::-moz-range-thumb {
     }
 
     .wrap-footer-content .wrap-function-info .fc-info-item {
-        width: 100%;
+     width: 50%;
         border-right: none !important;
-        padding: 20.5px 5px;
+        padding: 11px 10px 13px 11px;
         border-bottom: 1px solid;
         border-left: none !important;
         margin: 0 !important;
+        white-space: nowrap;
     }
 
     .more-product-box {
@@ -2397,10 +2403,19 @@ input[type="range"]::-moz-range-thumb {
         font-size: 10px;
     }
 
+    .single-more-product .card-body {
+        padding: 10px;
+        text-align: justify;
+    }
+
     .single-more-product .card-body .vat {
-        font-size: 9px;
-        margin-top: -4px;
-        margin-bottom: 0px !important;
+        font-size: 13px;
+        margin-top: 0px;
+        margin-bottom: 3px !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: start !important;
+        gap: 0px !important;
     }
 
     .banner-part {
@@ -2420,7 +2435,7 @@ input[type="range"]::-moz-range-thumb {
         position: relative;
         color: #00000040;
         font-size: 20px;
-        right: -135px;
+        right: -123px;
         top: 5px;
         cursor: pointer;
     }
@@ -2433,11 +2448,21 @@ input[type="range"]::-moz-range-thumb {
         border-radius: 8px;
         margin-top: -14px;
     }
-    .nav-search-part .main-info-area {
-    gap: 35px;
 
+    .nav-search-part .main-info-area {
+        gap: 35px;
+
+    }
+
+    .login-part .profile-img-sm {
+        display: block;
+    }
+    .wrap-footer-content .wrap-function-info .fc-info-item i {
+    font-size: 25px;
+    margin-right: 10px;
 }
-.login-part  .profile-img-sm{
-    display: block;
+.wrap-footer-content .wrap-function-info .fc-info-item .wrap-left-info {
+    font-size: 11px;
+
 }
 }
