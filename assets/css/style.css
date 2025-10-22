@@ -2366,4 +2366,22 @@ input[type="range"]::-moz-range-thumb {
     padding-bottom: 2px;
 
 }
+.wrap-footer-content .wrap-function-info .fc-info-item {
+    width: 100%;
+    border-right: none !important;
+    padding: 20.5px 5px;
+    border-bottom: 1px solid ;
+    border-left: none !important;
+    margin: 0 !important;
+}
+.more-product-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
+    gap: 10px;
+}.single-more-product .card-body {
+   font-size: 10px;                       
+}
+.single-more-product .card-body .vat {
+    font-size: 10px;
+}
 }

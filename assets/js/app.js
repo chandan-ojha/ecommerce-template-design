@@ -67,39 +67,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-  const zoomContainer = document.getElementById("zoomBox");
-  const zoomImage = document.getElementById("zoomImage");
-
-  // Create magnifier
-  const magnifier = document.createElement("div");
-  magnifier.classList.add("magnifier");
-  const magnifierImg = document.createElement("img");
-  magnifierImg.src = zoomImage.src;
-  magnifier.appendChild(magnifierImg);
-  zoomContainer.appendChild(magnifier);
-
-  const zoomLevel = 2; // Magnification level
-
-  zoomContainer.addEventListener("mousemove", (e) => {
-    magnifier.style.display = "block";
-
-    const rect = zoomContainer.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const glassSize = magnifier.offsetWidth / 2;
-
-    // Position the magnifier glass
-    magnifier.style.left = `${x - glassSize}px`;
-    magnifier.style.top = `${y - glassSize}px`;
-
-    // Move the background image inside magnifier
-    magnifierImg.style.width = `${zoomImage.width * zoomLevel}px`;
-    magnifierImg.style.height = `${zoomImage.height * zoomLevel}px`;
-    magnifierImg.style.left = `${-x * (zoomLevel - 1) + glassSize}px`;
-    magnifierImg.style.top = `${-y * (zoomLevel - 1) + glassSize}px`;
-  });
-
-  zoomContainer.addEventListener("mouseleave", () => {
-    magnifier.style.display = "none";
-  });
