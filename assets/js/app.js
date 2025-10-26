@@ -66,4 +66,28 @@ document.addEventListener("DOMContentLoaded", () => {
   leftBtn.addEventListener("click", () => safeScrollBy(-scrollAmount));
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const collapse = document.querySelector('.navbar-collapse');
+  const overlay = document.querySelector('.navbar-overlay');
 
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      const bsCollapse = bootstrap.Collapse.getInstance(collapse);
+      bsCollapse.hide();
+    });
+  }
+});
+let overlayCloseEnabled = false; // change to true to enable
+
+document.addEventListener("DOMContentLoaded", () => {
+  const collapse = document.querySelector('.navbar-collapse');
+  const overlay = document.querySelector('.navbar-overlay');
+
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      if (!overlayCloseEnabled) return; // do nothing if disabled
+      const bsCollapse = bootstrap.Collapse.getInstance(collapse);
+      bsCollapse.hide();
+    });
+  }
+});

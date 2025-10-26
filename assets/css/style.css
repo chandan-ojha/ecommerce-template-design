@@ -310,6 +310,7 @@ button:focus {
     font-size: 12px;
     font-weight: 500;
     margin-top: -3px;
+    
 }
 
 .login-part .profile-img-sm {
@@ -2339,13 +2340,7 @@ input[type="range"]::-moz-range-thumb {
     }
 
     .navbar-collapse .get-offer {
-        background: #f1ff52;
-        color: #203a8e !important;
-        border-radius: 8px;
-        padding: 2px 5px;
-        font-size: 12px;
-        font-weight: 500;
-        margin-top: 3px;
+        width: 125px !important;
     }
 
     .slider .carousel-item .slider-image {
@@ -2482,5 +2477,60 @@ input[type="range"]::-moz-range-thumb {
     margin-top: 4px;
     font-size: 12px;
     margin-right: 21px;
+}
+ .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: -250px; /* hidden by default */
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    z-index: 1050;
+  }
+
+  .navbar-collapse.show {
+    left: 0; /* slide in */
+  }
+
+  /* Dark overlay behind menu */
+  .navbar-overlay {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1040;
+    display: none;
+  }
+
+  .navbar-collapse.show ~ .navbar-overlay {
+    display: block;
+  }
+  ul.navbar-items.navbar-nav {
+    margin-top: -26rem;
+           width: 221px;
+}
+.navbar-collapse .nav-item {
+    color: var(--black);
+    font-size: 14px;
+    margin-right: 24px;
+    margin-bottom: 40px;
+            width: 100%;
+}
+.nav-right.d-flex.align-items-center.gap-4 {
+    opacity: 0;
+}
+button.navbar-toggler {
+    border: none;
+}
+button.navbar-toggler .modal-close-icon{
+
+    background-color: #6d7a85;
+    color: var(--white);
+    border-radius: 30px;
+    font-size: var(--font16);
+    padding: 3px;
+    border: none !important;
 }
 }
